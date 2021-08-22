@@ -3,9 +3,13 @@ import Header from "./Bootstrap/header";
 
 class App extends Component {
   state = {
-    DarkMode: true
+    DarkMode: true,
+    Name: "",
+    Image: ""
   };
   render() {
+    // eslint-disable-next-line no-unused-vars
+    const { DarkMode, Name, Image } = this.state;
     return (
       <div className="App">
         <Header
@@ -14,6 +18,13 @@ class App extends Component {
         >
           Gittweet
         </Header>
+        <div className="container">
+          <div className="col-12 col-md-6 offset-md-3">
+            {Name.trim().length > 0 && Image.trim().length > 0
+              ? "Show compose"
+              : "Ask for name and image"}
+          </div>
+        </div>
       </div>
     );
   }
