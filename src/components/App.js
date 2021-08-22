@@ -8,7 +8,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header dark={this.state.DarkMode}>Gittweet</Header>
+        <Header
+          dark={this.state.DarkMode}
+          containerClassName="justify-content-center"
+        >
+          Gittweet
+        </Header>
       </div>
     );
   }

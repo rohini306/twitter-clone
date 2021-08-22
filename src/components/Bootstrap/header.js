@@ -8,15 +8,13 @@ const Header = ({ dark, children, className, containerClassName }) => {
         className ? " " + className : ""
       }`}
     >
-      <div class="container-fluid">
-        <span
-          className={
-            "navbar-brand mb-0 h1" +
-            (containerClassName ? " " + containerClassName : "")
-          }
-        >
-          {children}
-        </span>
+      <div
+        class={
+          "container-fluid" +
+          (containerClassName ? " " + containerClassName : "")
+        }
+      >
+        <span className="navbar-brand mb-0 h1">{children}</span>
       </div>
     </nav>
   );
